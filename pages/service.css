@@ -9,7 +9,7 @@
 :root {
     --white: white;
     --nav-hover-color: #f530bdc8;
-    --main-bg-color: #06073b;
+    --main-bg-color: #04063d;
     --text-dark: #333333;
     --text-black: black;
     --left-btn-bg-pink: #FB3189;
@@ -145,8 +145,8 @@ footer button {
 
 .hero-star {
     position: absolute;
-    width: 80px;
-    left: 12%;
+    width: 40px;
+    right: 0%;
     top: 80px;
     animation: rotate 8s linear infinite;
 }
@@ -154,9 +154,11 @@ footer button {
 .hero-shape {
     position: absolute;
     width: 220px;
-    right: 10%;
-    bottom: -20px;
-    opacity: .8;
+    left: -7%;
+    bottom: 50px;
+    opacity: 0.8;
+    filter: drop-shadow(4px 4px 30px rgb(248, 244, 19));
+    background-color: transparent;
     animation: float 4s linear infinite alternate;
 }
 

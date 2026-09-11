@@ -9,7 +9,7 @@
 :root {
     --white: white;
     --nav-hover-color: #f530bdc8;
-    --main-bg-color: #06073b;
+    --main-bg-color: #04063d;
     --text-dark: #333333;
     --text-black: black;
     --left-btn-bg-pink: #FB3189;
@@ -145,8 +145,8 @@ footer button {
 
 .hero-star {
     position: absolute;
-    width: 80px;
-    left: 12%;
+    width: 40px;
+    right: 0%;
     top: 80px;
     animation: rotate 8s linear infinite;
 }
@@ -154,9 +154,11 @@ footer button {
 .hero-shape {
     position: absolute;
     width: 220px;
-    right: 10%;
-    bottom: -20px;
-    opacity: .8;
+    left: -7%;
+    bottom: 50px;
+    opacity: 0.8;
+    filter: drop-shadow(4px 4px 30px rgb(248, 244, 19));
+    background-color: transparent;
     animation: float 4s linear infinite alternate;
 }
 
@@ -164,6 +166,7 @@ footer button {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -173,6 +176,7 @@ footer button {
     from {
         transform: translateY(-10px);
     }
+
     to {
         transform: translateY(10px);
     }
@@ -227,10 +231,10 @@ footer button {
 
 .case:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
 }
 
-.case > img {
+.case>img {
     width: 100%;
     height: 280px;
     object-fit: cover;
@@ -334,7 +338,7 @@ footer button {
     overflow: hidden;
 }
 
-.cta > div {
+.cta>div {
     width: 60%;
     position: relative;
     z-index: 2;
@@ -351,7 +355,7 @@ footer button {
     line-height: 1.8;
 }
 
-.cta > img {
+.cta>img {
     width: 45%;
     max-width: 540px;
     position: absolute;
@@ -465,15 +469,19 @@ footer button {
     .case-list {
         grid-template-columns: 1fr;
     }
+
     .work-list {
         grid-template-columns: 1fr 1fr;
     }
+
     .cta {
         flex-direction: column;
     }
-    .cta > div {
+
+    .cta>div {
         width: 100%;
     }
+
     .foot {
         grid-template-columns: 1fr 1fr;
     }
@@ -486,27 +494,33 @@ footer button {
         flex-direction: column;
         gap: 20px;
     }
+
     .u-list {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
+
     .hero h1 {
         font-size: 42px;
     }
+
     .cases,
     .work,
     .cta {
         padding: 75px 6%;
     }
+
     .head h2,
     .cta h2 {
         font-size: 34px;
     }
+
     .work-list,
     .foot {
         grid-template-columns: 1fr;
     }
+
     .bottom {
         padding: 20px 6%;
         flex-direction: column;

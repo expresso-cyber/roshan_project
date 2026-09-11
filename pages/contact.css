@@ -8,7 +8,7 @@
 :root {
     --white: white;
     --nav-hover-color: #f530bdc8;
-    --main-bg-color: #06073b;
+    --main-bg-color: #04063d;
     --text-dark: #333333;
     --text-black: black;
     --left-btn-bg-pink: #FB3189;
@@ -147,18 +147,20 @@ footer button {
 
 .hero-img {
     position: absolute;
-    width: 210px;
-    right: 9%;
-    bottom: -25px;
+    width: 220px;
+    left: -4%;
+    bottom: 0px;
     opacity: 0.8;
+    filter: drop-shadow(4px 4px 90px rgb(248, 202, 19));
+    background-color: transparent;
     animation: float 4s linear infinite alternate;
 }
 
 .hero-star {
     position: absolute;
-    width: 75px;
-    left: 12%;
-    top: 85px;
+    width: 40px;
+    right: 0%;
+    top: 80px;
     animation: rotate 8s linear infinite;
 }
 
@@ -351,7 +353,7 @@ footer button {
     margin-bottom: 5px;
 }
 
-.location-box > a {
+.location-box>a {
     display: block;
     width: fit-content;
     margin: 0 auto 10px;
@@ -392,18 +394,18 @@ footer button {
     line-height: 1.8;
 }
 
-.cta > img {
+.cta>img {
     position: absolute;
 }
 
-.cta > img:nth-of-type(1) {
+.cta>img:nth-of-type(1) {
     width: 360px;
     right: 2%;
     bottom: -10px;
     opacity: 0.9;
 }
 
-.cta > img:nth-of-type(2) {
+.cta>img:nth-of-type(2) {
     width: 180px;
     right: 30%;
     bottom: 20px;

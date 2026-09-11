@@ -9,7 +9,7 @@
 :root {
     --white: white;
     --nav-hover-color: #f530bdc8;
-    --main-bg-color: #06073b;
+    --main-bg-color: #04063d;
     --text-dark: #333333;
     --text-black: black;
     --left-btn-bg-pink: #FB3189;
@@ -33,12 +33,6 @@ body {
     align-items: center;
     background: var(--main-bg-color);
 }
-/* 
-.logo{
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
 
 .logo,
 .foot-logo {
@@ -151,8 +145,8 @@ body {
 
 .hero-star {
     position: absolute;
-    width: 80px;
-    left: 12%;
+    width: 40px;
+    right: 0%;
     top: 80px;
     animation: rotate 8s linear infinite;
 }
@@ -169,13 +163,23 @@ body {
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes float {
-    from { transform: translateY(-12px); }
-    to { transform: translateY(12px); }
+    from {
+        transform: translateY(-12px);
+    }
+
+    to {
+        transform: translateY(12px);
+    }
 }
 
 .about,
@@ -200,10 +204,25 @@ body {
     position: relative;
 }
 
-.about-img > img,
-.value-img > img {
+.about-img>img,
+.value-img>img {
     width: 100%;
     display: block;
+}
+
+.about-img>::before{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    width: 150%;
+    background: linear-gradient(45deg,
+                transparent 45%,
+                rgba(239, 45, 45, 0.6) 50%,
+                transparent 55%);
+    z-index: 2;
 }
 
 .about-img2 {
@@ -213,6 +232,73 @@ body {
     bottom: 20px;
     animation: float 4s linear infinite alternate;
 }
+
+/* .about,
+.value {
+    width: 100%;
+    padding: 110px 8%;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-img,
+.about-text,
+.value-img,
+.value-text {
+    width: 30%;
+}
+
+.about-img>img{
+    width: 50px;
+}
+
+.about-img,
+.value-img {
+    position: relative;
+    border-radius: 500px;
+    overflow: hidden;
+}
+
+.about-img>img,
+.value-img>img {
+    width: 100%;
+    display: block;
+}
+
+.about-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(238, 235, 235, 0) 30%,
+            rgba(157, 154, 154, 0.8) 50%,
+            rgba(229, 210, 210, 0.878) 70%,
+            transparent 100%);
+    transform: skewX(-25deg);
+    transition: left 0.6s ease-in-out;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.about-img:hover::before {
+    left: 150%;
+}
+
+.about-img2 {
+    position: absolute;
+    width: 130px !important;
+    right: 0;
+    bottom: 20px;
+    z-index: 3;
+    animation: float 4s linear infinite alternate;
+} */
+
 
 .about-text h5,
 .head h5,
@@ -232,9 +318,9 @@ body {
 }
 
 .about-text p,
-.head > p,
+.head>p,
 .why-box p,
-.value-text > p,
+.value-text>p,
 .value-box p,
 .mission-box p,
 .history-box p,
@@ -270,7 +356,7 @@ body {
     overflow: hidden;
 }
 
-.trust > p {
+.trust>p {
     min-width: 180px;
     font-size: 18px;
     line-height: 1.5;
@@ -429,7 +515,7 @@ body {
 }
 
 .bar {
-        width: 100%;
+    width: 100%;
     height: 190px;
     border: 1px solid green;
     border: 3px solid white;
@@ -468,13 +554,13 @@ body {
     border-radius: 18px;
 }
 
-.person-img > img {
+.person-img>img {
     width: 100%;
     display: block;
     transition: 0.4s ease;
 }
 
-.person:hover .person-img > img {
+.person:hover .person-img>img {
     transform: scale(1.05);
 }
 
@@ -560,7 +646,7 @@ body {
     overflow: hidden;
 }
 
-.cta > div {
+.cta>div {
     width: 60%;
     position: relative;
     z-index: 2;
@@ -575,7 +661,7 @@ body {
     line-height: 1.8;
 }
 
-.cta > img {
+.cta>img {
     width: 45%;
     max-width: 540px;
     position: absolute;
@@ -667,7 +753,7 @@ footer {
     .about-text,
     .value-img,
     .value-text,
-    .cta > div {
+    .cta>div {
         width: 100%;
     }
 
@@ -685,7 +771,7 @@ footer {
         align-items: flex-start;
     }
 
-    .cta > img {
+    .cta>img {
         width: 55%;
         right: -10%;
     }
@@ -747,7 +833,7 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .cta > img {
+    .cta>img {
         width: 85%;
         right: -25%;
         opacity: 0.5;

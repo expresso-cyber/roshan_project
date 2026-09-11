@@ -8,7 +8,7 @@
 :root {
     --white: white;
     --nav-hover-color: #f530bdc8;
-    --main-bg-color: #06073b;
+    --main-bg-color: #04063d;
     --text-dark: #333333;
     --text-black: black;
     --left-btn-bg-pink: #FB3189;
@@ -146,25 +146,28 @@ footer button {
 
 .hero-star {
     position: absolute;
-    width: 80px;
-    left: 12%;
+    width: 40px;
+    right: 0%;
     top: 80px;
     animation: rotate 8s linear infinite;
 }
 
 .hero-shape {
     position: absolute;
-    width: 220px;
-    right: 10%;
-    bottom: -20px;
-    opacity: .8;
-    animation: float 4s linear infinite alternate;
+        width: 220px;
+        left: -7%;
+        bottom: 50px;
+        opacity: 0.8;
+        filter: drop-shadow(4px 4px 30px rgb(248, 244, 19));
+        background-color: transparent;
+        animation: float 4s linear infinite alternate;
 }
 
 @keyframes rotate {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -174,6 +177,7 @@ footer button {
     from {
         transform: translateY(-10px);
     }
+
     to {
         transform: translateY(10px);
     }
@@ -203,7 +207,7 @@ footer button {
 
 .post:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
 }
 
 .post img {
@@ -239,7 +243,7 @@ footer button {
     padding: 0 24px 20px;
 }
 
-.post > a {
+.post>a {
     display: inline-block;
     color: var(--left-btn-bg-pink);
     text-decoration: none;
@@ -247,7 +251,7 @@ footer button {
     transition: .25s linear;
 }
 
-.post > a:hover {
+.post>a:hover {
     color: #111;
 }
 
@@ -269,7 +273,7 @@ footer button {
     margin-bottom: 20px;
 }
 
-.box > a {
+.box>a {
     display: block;
     color: #666;
     text-decoration: none;
@@ -278,7 +282,7 @@ footer button {
     transition: .25s linear;
 }
 
-.box > a:hover {
+.box>a:hover {
     color: var(--left-btn-bg-pink);
 }
 
@@ -375,7 +379,7 @@ footer button {
     overflow: hidden;
 }
 
-.cta > div {
+.cta>div {
     width: 60%;
     position: relative;
     z-index: 2;
@@ -393,7 +397,7 @@ footer button {
     line-height: 1.8;
 }
 
-.cta > img {
+.cta>img {
     width: 45%;
     max-width: 540px;
     position: absolute;
@@ -508,13 +512,16 @@ footer button {
     .blog {
         grid-template-columns: 1fr;
     }
+
     .side {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
     .service-list {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .foot {
         grid-template-columns: 1fr 1fr;
     }
@@ -527,40 +534,50 @@ footer button {
         flex-direction: column;
         gap: 20px;
     }
+
     .u-list {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
+
     .hero h1 {
         font-size: 42px;
     }
+
     .blog {
         padding: 75px 6%;
     }
+
     .blog-list,
     .side,
     .foot {
         grid-template-columns: 1fr;
     }
+
     .post img {
         height: 260px;
     }
+
     .cta {
         padding: 75px 6%;
     }
-    .cta > div {
+
+    .cta>div {
         width: 100%;
     }
-    .cta > img {
+
+    .cta>img {
         width: 70%;
         opacity: .4;
     }
+
     .foot,
     .bottom {
         padding-left: 6%;
         padding-right: 6%;
     }
+
     .bottom {
         flex-direction: column;
     }
